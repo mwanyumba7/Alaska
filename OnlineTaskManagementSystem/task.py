@@ -131,4 +131,142 @@ def main():
             task_manager.update_task(task)
         elif choice == "3":
             title = input("Enter the title of the task to be deleted: ")
-            task = Task(title, None
+            task = Task(title, None , None, None, None)
+            task_manager.delete_task(task)
+        elif choice == "4":
+            task_manager.view_tasks()
+        elif choice == "5":
+            break
+        else:
+            print("Invalid Choice")
+
+# Calling the main function
+if __name__ == "__main__":
+    main()
+
+# Output:
+"""
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 1
+Enter the title of the task: Task 1
+Enter the description of the task: This is task 1
+Enter the due date of the task (YYYY-MM-DD): 2021-10-10
+Enter the priority of the task (1-5): 1
+Enter the status of the task (Not Started, In Progress, Completed): Not Started
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 1
+Enter the title of the task: Task 2
+Enter the description of the task: This is task 2
+Enter the due date of the task (YYYY-MM-DD): 2021-10-11
+Enter the priority of the task (1-5): 2
+Enter the status of the task (Not Started, In Progress, Completed): In Progress
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 1
+Enter the title of the task: Task 3
+Enter the description of the task: This is task 3
+Enter the due date of the task (YYYY-MM-DD): 2021-10-12
+Enter the priority of the task (1-5): 3
+Enter the status of the task (Not Started, In Progress, Completed): Completed
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 4
+Title:  Task 1
+Description:  This is task 1
+Due Date:  2021-10-10
+Priority:  1
+Status:  Not Started
+
+Title:  Task 2
+Description:  This is task 2
+Due Date:  2021-10-11
+Priority:  2
+Status:  In Progress
+
+Title:  Task 3
+Description:  This is task 3
+Due Date:  2021-10-12
+Priority:  3
+Status:  Completed
+
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 2
+Enter the title of the task to be updated: Task 2
+Enter the description of the task: This is task 2
+Enter the due date of the task (YYYY-MM-DD): 2021-10-13
+Enter the priority of the task (1-5): 4
+Enter the status of the task (Not Started, In Progress, Completed): Completed
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 4
+Title:  Task 1
+Description:  This is task 1
+Due Date:  2021-10-10
+Priority:  1
+Status:  Not Started
+
+Title:  Task 2
+Description:  This is task 2
+Due Date:  2021-10-13
+Priority:  4
+Status:  Completed
+
+Title:  Task 3
+Description:  This is task 3
+Due Date:  2021-10-12
+Priority:  3
+Status:  Completed
+
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 3
+Enter the title of the task to be deleted: Task 3
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 4
+Title:  Task 1
+Description:  This is task 1
+Due Date:  2021-10-10
+Priority:  1
+Status:  Not Started
+
+Title:  Task 2
+Description:  This is task 2
+Due Date:  2021-10-13
+Priority:  4
+Status:  Completed
+
+1. Create Task
+2. Update Task
+3. Delete Task
+4. View Tasks
+5. Exit
+Enter your choice: 5
+"""
